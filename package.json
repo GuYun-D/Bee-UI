@@ -6,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite examples"
+    "dev": "vite examples",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
@@ -22,10 +25,14 @@
     "@bee-ui/components": "workspace:^",
     "@bee-ui/examples": "workspace:^",
     "@bee-ui/theme-chalk": "workspace:^",
-    "@bee-ui/utils": "workspace:^"
+    "@bee-ui/utils": "workspace:^",
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "highlight.js": "^11.10.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.0",
-    "vite": "^5.4.11"
+    "sass": "^1.81.0",
+    "vite": "^5.4.11",
+    "vitepress": "^1.5.0"
   }
 }
