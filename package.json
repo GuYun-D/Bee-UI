@@ -27,7 +27,8 @@
     "@bee-ui/theme-chalk": "workspace:^",
     "@bee-ui/utils": "workspace:^",
     "@highlightjs/vue-plugin": "^2.1.0",
-    "highlight.js": "^11.10.0"
+    "highlight.js": "^11.10.0",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.0",

@@ -26,6 +26,9 @@ importers:
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.2
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
@@ -38,7 +41,7 @@ importers:
         version: 5.4.11(sass@1.81.0)
       vitepress:
         specifier: ^1.5.0
-        version: 1.5.0(@algolia/client-search@5.15.0)(sass@1.81.0)(search-insights@2.17.3)
+        version: 1.5.0(@algolia/client-search@5.15.0)(sass@1.81.0)(search-insights@2.17.3)(typescript@5.7.2)
 
   examples: {}
 
@@ -491,7 +494,7 @@ packages:
       vue: ^3
     dependencies:
       highlight.js: 11.10.0
-      vue: 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
     dev: false
 
   /@iconify-json/simple-icons@1.2.12:
@@ -903,7 +906,7 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 5.4.11(sass@1.81.0)
-      vue: 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
     dev: true
 
   /@vue/compiler-core@3.5.13:
@@ -990,7 +993,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
-      vue: 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
 
   /@vue/shared@3.5.13:
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
@@ -1527,6 +1530,11 @@ packages:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
     dev: true
 
+  /typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   /unist-util-is@6.0.0:
     resolution: {integrity: sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==}
     dependencies:
@@ -1613,7 +1621,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.5.0(@algolia/client-search@5.15.0)(sass@1.81.0)(search-insights@2.17.3):
+  /vitepress@1.5.0(@algolia/client-search@5.15.0)(sass@1.81.0)(search-insights@2.17.3)(typescript@5.7.2):
     resolution: {integrity: sha512-q4Q/G2zjvynvizdB3/bupdYkCJe2umSAMv9Ju4d92E6/NXJ59z70xB0q5p/4lpRyAwflDsbwy1mLV9Q5+nlB+g==}
     hasBin: true
     peerDependencies:
@@ -1642,7 +1650,7 @@ packages:
       minisearch: 7.1.1
       shiki: 1.23.1
       vite: 5.4.11(sass@1.81.0)
-      vue: 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
@@ -1684,10 +1692,10 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
     dev: true
 
-  /vue@3.5.13:
+  /vue@3.5.13(typescript@5.7.2):
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==}
     peerDependencies:
       typescript: '*'
@@ -1700,6 +1708,7 @@ packages:
       '@vue/runtime-dom': 3.5.13
       '@vue/server-renderer': 3.5.13(vue@3.5.13)
       '@vue/shared': 3.5.13
+      typescript: 5.7.2
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
