@@ -16,8 +16,8 @@
   </button>
 </template>
 
-<script setup>
-import { ButtonProps } from "./button";
+<script setup lang="ts">
+import { ButtonProps } from "./buttont";
 
 defineOptions({
   name: "t-button",
@@ -30,5 +30,5 @@ defineProps(ButtonProps);
 </script>
 
 <style scoped lang="scss">
-@import '../../../theme-chalk/bee-button.scss';
+@import "../../../theme-chalk/bee-button.scss";
 </style>

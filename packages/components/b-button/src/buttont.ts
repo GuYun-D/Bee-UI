@@ -13,7 +13,7 @@ export const ButtonProps = {
   type: {
     type: String,
     default: "primary",
-    validator(value) {
+    validator(value: string) {
       return BUTTON_TYPE.includes(value);
     },
   },
@@ -21,7 +21,7 @@ export const ButtonProps = {
   size: {
     type: String,
     default: "",
-    validator(value) {
+    validator(value: string) {
       return BUTTON_SIZE.includes(value);
     },
   },
