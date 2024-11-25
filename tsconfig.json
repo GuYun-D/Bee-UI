@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
@@ -19,6 +19,10 @@
       "@bee-ui/*": [
         "packages/*"
       ],
+      "extensions": [
+        ".ts",
+        ".tsx"
+      ]
     },
     "lib": [
       "esnext",
