@@ -1,108 +1,73 @@
-.t-button {
-  display: inline-block;
-  white-space: nowrap;
-  cursor: pointer;
+$bee-button-default-height: 44px;
+$bee-button-default-font-size: 14px;
+$bee-button-active-bg-alpha: 0.8;
+
+$bee-button-color-scheme: (
+  primary: var(--bee-primary),
+  danger: var(--bee-danger),
+  success: var(--bee-success),
+  warning: var(--bee-warning),
+  info: var(--bee-info),
+);
+
+$bee-button-size-scheam: (
+  mini: 37px,
+  small: 40px,
+  large: 48px,
+);
+
+.bee-button {
+  height: $bee-button-default-height;
+  width: 100%;
+  border: 1px solid var(--bee-border-color);
   background-color: #fff;
-  border: 1px solid #fff;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  font-weight: 500;
-  line-height: 1;
+  cursor: pointer;
+  color: var(--bee-primary);
+  border-radius: var(--bee-default-border-radius);
+  font-size: $bee-button-default-font-size;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  min-width: 98px;
-  padding: 12px 18px;
-  font-size: 14px;
-  border-radius: 4px;
-  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+  transition: box-shadow var(--bee-animation-duration);
+
   &:hover:not(:disabled) {
     box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
   }
-}
 
-.t-button > .button__inner {
-  display: flex;
-  align-items: center;
-}
-
-.t-button.t-button--small {
-  min-width: 92px;
-  padding: 10px 18px;
-}
-.t-button.t-button--mini {
-  min-width: 80px;
-  padding: 9px 15px;
-  font-size: 12px;
-  border-radius: 3px;
-}
-.t-button.t-button--icon {
-  min-width: 40px;
-  padding: 8px 15px;
-  font-size: 18px;
-  border-radius: 4px;
-}
-.t-button.is-round {
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
-.t-button.is-disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-.t-button__default {
-  color: var(--t-primary);
-  background-color: transparent;
   &:active:not(:disabled) {
-    background: #e6e6e6;
-    border-color: #e6e6e6;
-    color: var(--t-default);
-    box-shadow: 0 0 0 transparent;
+    background: rgba(#fff, $bee-button-active-bg-alpha);
   }
-}
 
-.t-button__primary {
-  color: #fff;
-  background-color: var(--t-primary);
-  border-color: var(--t-primary);
-  &:active:not(:disabled) {
-    background: #324cdd;
-  }
-}
-.t-button__success {
-  color: #fff;
-  background-color: var(--t-success);
-  border-color: var(--t-success);
-  &:active:not(:disabled) {
-    background: #24a46d;
-  }
-}
-.t-button__warning {
-  color: #fff;
-  background-color: var(--t-warning);
-  border-color: var(--t-warning);
-  &:active:not(:disabled) {
-    background: #fa3a0e;
-  }
-}
+  @each $key, $color in $bee-button-color-scheme {
+    &__#{$key} {
+      background-color: $color;
+      border: none;
+      color: #fff;
 
-.t-button__info {
-  color: #fff;
-  background-color: var(--t-info);
-  border-color: var(--t-info);
-  &:active:not(:disabled) {
-    background: #0da5c0;
+      &:active:not(:disabled) {
+        opacity: $bee-button-active-bg-alpha;
+        background-color: $color;
+      }
+    }
   }
-}
 
-.t-button__danger {
-  color: #fff;
-  background-color: var(--t-danger);
-  border-color: var(--t-danger);
-  &:active:not(:disabled) {
-    background: #ec0c38;
+  @each $key, $size in $bee-button-size-scheam {
+    &__#{$key} {
+      height: $size;
+    }
+  }
+
+  &__text {
+    background-color: transparent;
+    border: none;
+
+    &:active {
+      background-color: transparent !important;
+    }
+
+    &:hover {
+      box-shadow: none !important;
+    }
   }
 }

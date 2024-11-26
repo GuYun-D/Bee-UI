@@ -1,2 +1,1 @@
-export { BButton } from "./b-button";
-
+export { BeeButton } from "./Button";

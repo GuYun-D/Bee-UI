@@ -1,11 +1,10 @@
 {
-  "name": "@bee-ui/b-button",
+  "name": "@bee-ui/bee-button",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite --port 5555"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
