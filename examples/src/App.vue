@@ -6,6 +6,14 @@ import Mobile from '../../docs/.vitepress/theme/Mobile/index.vue'
   <div style="display: flex; align-items: center; width: 100vw; height: 100vh; background-color: #8b8b8b">
     <Mobile>
       <div style="box-sizing: border-box; margin: 10px">
+        <BeeButton circle inline style="margin-bottom: 10px">文</BeeButton>
+        <BeeButton circle icon="sousuo" size="mini" inline style="margin-bottom: 10px" type="primary"></BeeButton>
+        <BeeButton circle loading size="small" inline style="margin-bottom: 10px" type="success"></BeeButton>
+        <BeeButton icon="message" circle size="large" inline style="margin-bottom: 10px" type="info"></BeeButton>
+      </div>
+
+      <hr />
+      <div style="box-sizing: border-box; margin: 10px">
         <BeeButton inline style="margin-bottom: 10px">default</BeeButton>
         <BeeButton size="mini" inline style="margin-bottom: 10px" type="primary">primary</BeeButton>
         <BeeButton loading size="small" inline style="margin-bottom: 10px" type="success">success</BeeButton>

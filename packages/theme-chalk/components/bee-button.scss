@@ -34,6 +34,14 @@ $bee-button-size-scheam: (
   -ms-user-select: none;
   transition: box-shadow var(--bee-animation-duration);
   box-sizing: border-box;
+  vertical-align: middle;
+
+  &.bee-button__circle {
+    width: $bee-button-default-height !important;
+    height: $bee-button-default-height !important;
+    border-radius: 50%;
+    padding: 0 !important;
+  }
 
   &:hover:not(:disabled) {
     box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
@@ -59,6 +67,13 @@ $bee-button-size-scheam: (
   @each $key, $size in $bee-button-size-scheam {
     &__#{$key} {
       height: $size;
+
+      &.bee-button__circle {
+        width: $size !important;
+        height: $size !important;
+        border-radius: 50%;
+        padding: 0 !important;
+      }
     }
   }
 
