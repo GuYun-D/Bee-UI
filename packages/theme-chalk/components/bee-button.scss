@@ -100,14 +100,8 @@ $bee-button-size-scheam: (
     cursor: not-allowed;
   }
 
-  &__loading {
-    .bee-loading {
-      animation: rotateInfinite 2s infinite linear;
-    }
-  }
-
   &__inline {
-    display: inline-block;
+    display: inline-flex;
     width: auto;
     padding: $bee-button-default-height/6 $bee-button-default-height/3;
     height: auto;
@@ -121,6 +115,12 @@ $bee-button-size-scheam: (
       &.bee-button__#{$key} {
         padding: calc($size / 6) calc($size / 3);
       }
+    }
+  }
+
+  &__loading {
+    .bee-loading {
+      animation: rotateInfinite 2s infinite linear;
     }
   }
 }

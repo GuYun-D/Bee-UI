@@ -8,11 +8,11 @@ import Mobile from '../../docs/.vitepress/theme/Mobile/index.vue'
       <div style="box-sizing: border-box; margin: 10px">
         <BeeButton inline style="margin-bottom: 10px">default</BeeButton>
         <BeeButton size="mini" inline style="margin-bottom: 10px" type="primary">primary</BeeButton>
-        <BeeButton size="small" inline style="margin-bottom: 10px" type="success">success</BeeButton>
-        <BeeButton size="large" inline style="margin-bottom: 10px" type="info">info</BeeButton>
+        <BeeButton loading size="small" inline style="margin-bottom: 10px" type="success">success</BeeButton>
+        <BeeButton icon="sousuo" size="large" inline style="margin-bottom: 10px" type="info">info</BeeButton>
         <BeeButton inline style="margin-bottom: 10px" type="warning">warning</BeeButton>
         <BeeButton inline style="margin-bottom: 10px" type="danger">danger</BeeButton>
-        <BeeButton inline style="margin-bottom: 10px" type="text">text</BeeButton>
+        <BeeButton icon="sousuo" inline style="margin-bottom: 10px" type="text">text</BeeButton>
       </div>
 
       <hr />
