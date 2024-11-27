@@ -28,7 +28,7 @@
 
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
-  background-color: #dd0f0f;
+  background-color: #e2e2e2;
   border-radius: 5px;
 }
 
