@@ -9,12 +9,12 @@
     :style="buttonStyles"
     @mouseenter="custormConfig.onMouseEnter(_ref)"
   >
-    <i v-if="icon && iconPosition === 'left'" class="bee-icon" :class="`bee-${icon}`"></i>
+    <i style="margin-left: 0" v-if="icon && iconPosition === 'left'" class="bee-icon" :class="`bee-icon-${icon}`"></i>
     <span v-if="$slots.default">
       <slot />
     </span>
-    <i v-if="icon && iconPosition === 'right'" class="bee-icon" :class="`bee-${icon}`"></i>
-    <i :style="loadingStyle" v-if="loading" class="bee-icon bee-loading"></i>
+    <i style="margin-right: 0" v-if="icon && iconPosition === 'right'" class="bee-icon" :class="`bee-icon-${icon}`"></i>
+    <i :style="loadingStyle" style="margin-right: 0" v-if="loading" class="bee-icon bee-icon-loading"></i>
   </button>
 </template>
 

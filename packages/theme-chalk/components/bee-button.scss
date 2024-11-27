@@ -41,6 +41,10 @@ $bee-button-size-scheam: (
     height: $bee-button-default-height !important;
     border-radius: 50%;
     padding: 0 !important;
+
+    .bee-icon {
+      margin: 0;
+    }
   }
 
   &:hover:not(:disabled) {
@@ -134,7 +138,7 @@ $bee-button-size-scheam: (
   }
 
   &__loading {
-    .bee-loading {
+    .bee-icon-loading {
       animation: rotateInfinite 2s infinite linear;
     }
   }
