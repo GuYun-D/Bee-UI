@@ -42,7 +42,8 @@ const beeButtonClasses = computed(() => {
     [`bee-button__plain`]: props.plain,
     'bee-button__round': props.round,
     'bee-button__disabled': props.disabled,
-    'bee-button__loading': props.loading
+    'bee-button__loading': props.loading,
+    'bee-button__inline': props.inline
   }
 })
 

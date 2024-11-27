@@ -105,4 +105,22 @@ $bee-button-size-scheam: (
       animation: rotateInfinite 2s infinite linear;
     }
   }
+
+  &__inline {
+    display: inline-block;
+    width: auto;
+    padding: $bee-button-default-height/6 $bee-button-default-height/3;
+    height: auto;
+    border-radius: var(--bee-small-border-radius);
+
+    & + & {
+      margin-left: var(--bee-default-space);
+    }
+
+    @each $key, $size in $bee-button-size-scheam {
+      &.bee-button__#{$key} {
+        padding: calc($size / 6) calc($size / 3);
+      }
+    }
+  }
 }

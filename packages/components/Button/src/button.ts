@@ -40,6 +40,10 @@ export interface ButtonProps {
    * 按钮位置
    */
   iconPosition?: 'left' | 'right'
+  /**
+   * 行内按钮
+   */
+  inline?: boolean
 }
 
 /**
