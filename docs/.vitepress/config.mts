@@ -13,14 +13,14 @@ export default defineConfig({
     lastUpdatedText: "更新时间",
 
 
-    // sidebar: {
-    //   "/components/": [
-    //     {
-    //       text: "基本",
-    //       items: [{ text: "button 按钮", link: "/components/button/" }],
-    //     },
-    //   ],
-    // },
+    sidebar: {
+      "/components/": [
+        {
+          text: "按钮",
+          items: [{ text: "button 按钮", link: "/components/button/" }],
+        },
+      ],
+    },
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],

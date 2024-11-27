@@ -6,8 +6,9 @@ import "./style.css";
 import BeeUI from "@bee-ui/components";
 import "@bee-ui/theme-chalk/index.scss";
 import Preview from "./preview/index.vue";
+import Mobile from './Mobile/index.vue'
 import "highlight.js/styles/base16/summerfruit-light.css"; // 主题
-// import hljsVuePlugin from "@highlightjs/vue-plugin";
+import hljsVuePlugin from "@highlightjs/vue-plugin";
 
 export default {
   extends: DefaultTheme,
@@ -19,6 +20,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.use(BeeUI);
     app.component("Preview", Preview);
-    // app.use(hljsVuePlugin)
+    app.component('Mobile', Mobile)
+    app.use(hljsVuePlugin)
   },
 } satisfies Theme;
