@@ -21,7 +21,11 @@ const useButton = (props: ButtonProps, emits: SetupContext<ButtonEmits>['emit'])
     emits('click', evt)
   }
 
-  return { _ref, _props, handleClick }
+  const loadingStyle = {
+    color: (props.type === 'default' || props.plain) ? '#ccc' : props.color ? props.color : '#fff'
+  }
+
+  return { _ref, _props, handleClick, loadingStyle }
 }
 
 export default useButton

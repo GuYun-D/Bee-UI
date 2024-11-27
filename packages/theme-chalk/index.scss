@@ -1,4 +1,6 @@
-@import './common/base.scss';
-@import './common/theme.scss';
+@import "./common/base.scss";
+@import "./common/theme.scss";
+@import './mixin/index.scss';
 
-@import './bee-button.scss';
+@import "./components/icon.scss";
+@import "./components/bee-button.scss";

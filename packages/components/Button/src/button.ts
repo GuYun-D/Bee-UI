@@ -2,9 +2,13 @@
  * @description button 属性
  */
 export interface ButtonProps {
-  /* 按钮尺寸 */
+  /**
+   * 按钮尺寸
+   */
   size?: '' | 'small' | 'mini' | 'large'
-  /* 按钮类型 */
+  /**
+   * 按钮类型
+   */
   type?: 'default' | 'primary' | 'success' | 'warning' | 'info' | 'danger' | 'text'
   /* 按钮是否禁用 */
   disabled?: boolean
@@ -28,6 +32,14 @@ export interface ButtonProps {
    * 按钮背景色
    */
   bg?: string
+  /**
+   * 按钮图标
+   */
+  icon?: string
+  /**
+   * 按钮位置
+   */
+  iconPosition?: 'left' | 'right'
 }
 
 /**

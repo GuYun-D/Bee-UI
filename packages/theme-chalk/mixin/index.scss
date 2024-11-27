@@ -1,0 +1,18 @@
+@mixin flex($jc: center, $ai: center) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin icon($w, $h: null) {
+  width: $w;
+  height: if($h, $h, $w);
+  flex-shrink: 0;
+}
+
+@mixin hidenText($width) {
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

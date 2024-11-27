@@ -9,35 +9,31 @@
     :style="buttonStyles"
     @mouseenter="custormConfig.onMouseEnter(_ref)"
   >
-    <div class="t-button__inner">
-      <span v-if="$slots.default">
-        <slot />
-      </span>
-    </div>
+    <i v-if="icon && iconPosition === 'left'" class="bee-icon" :class="`bee-${icon}`"></i>
+    <span v-if="$slots.default">
+      <slot />
+    </span>
+    <i v-if="icon && iconPosition === 'right'" class="bee-icon" :class="`bee-${icon}`"></i>
+    <i :style="loadingStyle" v-if="loading" class="bee-icon bee-loading"></i>
   </button>
 </template>
 
 <script setup lang="ts">
-import { withDefaults, computed, ref, getCurrentInstance } from 'vue'
+import { withDefaults, computed, ref } from 'vue'
 import { type ButtonProps, buttonEmits } from './button'
 import useButton from './useButton'
 import useCustomStyles from './useCustomStyles'
 
-const baseButtonClassName = 'bee-button'
-const instance = getCurrentInstance()
-
 const props = withDefaults(defineProps<ButtonProps>(), {
-  size: ''
+  size: '',
+  iconPosition: 'right',
+  type: 'default'
 })
 const emits = defineEmits(buttonEmits)
 
-const { _ref, _props, handleClick } = useButton(props, emits)
+const { _ref, _props, handleClick, loadingStyle } = useButton(props, emits)
 
 let custormConfig = useCustomStyles(props)
-
-const defaultStyles = ref({
-  'background-color': props.bg
-})
 
 const beeButtonClasses = computed(() => {
   return {
@@ -45,7 +41,8 @@ const beeButtonClasses = computed(() => {
     [`bee-button__${props.size}`]: !!props.size,
     [`bee-button__plain`]: props.plain,
     'bee-button__round': props.round,
-    'bee-button__disabled': props.disabled
+    'bee-button__disabled': props.disabled,
+    'bee-button__loading': props.loading
   }
 })
 
@@ -54,7 +51,3 @@ const buttonStyles = ref({
   'background-color': props.bg
 })
 </script>
-
-<style scoped lang="scss">
-@import '../../../theme-chalk/bee-button.scss';
-</style>

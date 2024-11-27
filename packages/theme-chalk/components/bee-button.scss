@@ -1,3 +1,5 @@
+@import "../animation/index.scss";
+
 $bee-button-default-height: 44px;
 $bee-button-default-font-size: 14px;
 $bee-button-active-bg-alpha: 0.8;
@@ -17,6 +19,7 @@ $bee-button-size-scheam: (
 );
 
 .bee-button {
+  @include flex();
   height: $bee-button-default-height;
   width: 100%;
   border: 1px solid var(--bee-border-color);
@@ -92,8 +95,14 @@ $bee-button-size-scheam: (
     border-radius: 100px;
   }
 
-  &__disabled{
+  &__disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  &__loading {
+    .bee-loading {
+      animation: rotateInfinite 2s infinite linear;
+    }
   }
 }
