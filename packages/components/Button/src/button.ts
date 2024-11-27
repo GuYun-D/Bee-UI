@@ -17,7 +17,7 @@ export interface ButtonProps {
   /* 按钮文本颜色 */
   color?: string
   /* button 的 原生类型 */
-  navtiveType?: 'button' | 'submit' | 'reset'
+  nativeType?: 'button' | 'submit' | 'reset'
   /* 是否朴素按钮 */
   plain?: boolean
   /* 是否原型按钮 */

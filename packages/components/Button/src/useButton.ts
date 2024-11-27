@@ -7,7 +7,7 @@ const useButton = (props: ButtonProps, emits: SetupContext<ButtonEmits>['emit'])
   const _props = computed(() => {
     return {
       disabled: props.disabled || props.loading,
-      type: props.navtiveType
+      type: props.nativeType
     }
   })
 
@@ -15,14 +15,14 @@ const useButton = (props: ButtonProps, emits: SetupContext<ButtonEmits>['emit'])
     if (_props.value.disabled) {
       return evt.stopPropagation()
     }
-    if (props.navtiveType === 'reset') {
+    if (props.nativeType === 'reset') {
       // TODO: 表单重置
     }
     emits('click', evt)
   }
 
   const loadingStyle = {
-    color: (props.type === 'default' || props.plain) ? '#ccc' : props.color ? props.color : '#fff'
+    color: props.type === 'default' || props.plain ? '#ccc' : props.color ? props.color : '#fff'
   }
 
   return { _ref, _props, handleClick, loadingStyle }
