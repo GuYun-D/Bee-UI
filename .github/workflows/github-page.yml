@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +26,11 @@ jobs:
 
       - name: Build the docs
         run: pnpm run docs:build
+
+      - name: Setup Git user
+        run: |
+          git config --global user.name "GuYun-D"
+          git config --global user.email "1946306647@qq.com"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
