@@ -28,7 +28,7 @@
 
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
-  background-color: #e2e2e2;
+  background-color: transparent;
   border-radius: 5px;
 }
 
@@ -46,6 +46,9 @@
   background-color: #dcdcdc;
   cursor: pointer;
   margin-left: 50px;
+
+  background: url('https://img1.baidu.com/it/u=2358111707,2967358694&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=834') no-repeat;
+  background-size: cover;
 
   .status-bar {
     /* height: 40px; */
