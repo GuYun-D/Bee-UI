@@ -16,12 +16,32 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
+/* 滚动条整体样式 */
+::-webkit-scrollbar {
+  width: 3px; /* 纵向滚动条宽度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: #dd0f0f;
+  border-radius: 5px;
+}
+
+/* 滚动条滑块悬浮样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2aeb23;
+}
+
 .preview-mobile-container {
   position: relative;
   display: inline-block;
   border-radius: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 8px;
   background-color: #dcdcdc;
   cursor: pointer;
@@ -71,6 +91,7 @@
     height: 667px;
     background-color: #f1f1f1;
     border-radius: 20px;
+    overflow-y: auto;
   }
 }
 </style>

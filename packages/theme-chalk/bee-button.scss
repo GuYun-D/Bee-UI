@@ -30,6 +30,7 @@ $bee-button-size-scheam: (
   -webkit-user-select: none;
   -ms-user-select: none;
   transition: box-shadow var(--bee-animation-duration);
+  box-sizing: border-box;
 
   &:hover:not(:disabled) {
     box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
@@ -69,5 +70,30 @@ $bee-button-size-scheam: (
     &:hover {
       box-shadow: none !important;
     }
+  }
+
+  &__plain {
+    @each $key, $color in $bee-button-color-scheme {
+      &.bee-button__#{$key} {
+        color: $color;
+        background-color: transparent;
+        border: 1px solid $color;
+
+        &:hover {
+          background-color: $color;
+          color: #fff;
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__round {
+    border-radius: 100px;
+  }
+
+  &__disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }

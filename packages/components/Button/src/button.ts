@@ -1,5 +1,3 @@
-
-
 /**
  * @description button 属性
  */
@@ -22,6 +20,14 @@ export interface ButtonProps {
   circle?: boolean
   /* 是否加载中 */
   loading?: boolean
+  /**
+   * 原生的属性autofocus
+   */
+  autofocus?: boolean
+  /**
+   * 按钮背景色
+   */
+  bg?: string
 }
 
 /**
@@ -30,6 +36,5 @@ export interface ButtonProps {
 export const buttonEmits = {
   click: (e: MouseEvent) => e instanceof MouseEvent
 }
-
 
 export type ButtonEmits = typeof buttonEmits
