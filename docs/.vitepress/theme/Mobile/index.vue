@@ -13,8 +13,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 /* 滚动条整体样式 */
@@ -39,6 +38,9 @@
 }
 
 .preview-mobile-container {
+  width: 100%;
+  max-width: 375px;
+  min-height: 459px;
   position: relative;
   display: inline-block;
   border-radius: 20px;
@@ -46,7 +48,6 @@
   padding: 8px;
   background-color: #dcdcdc;
   cursor: pointer;
-  margin-left: 50px;
 
   background: url('https://img1.baidu.com/it/u=2358111707,2967358694&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=834') no-repeat;
   background-size: cover;
@@ -91,11 +92,14 @@
   }
 
   .inner {
-    width: 375px;
-    height: 667px;
+    width: 100%;
+    height: auto;
     background-color: #f1f1f1;
     border-radius: 20px;
     overflow-y: auto;
+    padding-bottom: 16px;
+    padding: 10px;
+    height: 100%;
   }
 }
 </style>
