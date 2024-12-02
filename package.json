@@ -27,11 +27,11 @@
     "@bee-ui/theme-chalk": "workspace:^",
     "@bee-ui/utils": "workspace:^",
     "@ctrl/tinycolor": "^4.1.0",
-    "@highlightjs/vue-plugin": "^2.1.0",
     "highlight.js": "^11.10.0",
     "i": "^0.3.7",
     "npm": "^10.9.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.0",
