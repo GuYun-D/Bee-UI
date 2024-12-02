@@ -1,12 +1,16 @@
 :root {
   --bee-default: #172b4d;
-  --bee-default-active-color: rgba(#172b4d, 0.8);
   --bee-primary: #4166FB;
-  --bee-primary-active-color: #ecf5ff;
+  --bee-primary-tint-color: #dce3ff;
   --bee-success: #2dce89;
+  --bee-success-tint-color: #effff8;
   --bee-info: #b4b4b4;
+  --bee-info-tint-color: #fff;
   --bee-warning: #fb6340;
+  --bee-warning-tint-color: #ffece8;
   --bee-danger: #f5365c;
+  --bee-danger-tint-color: #fff5f7;
+
   --bee-border-color: #E7E7E7;
   --bee-animation-duration: 350ms;
 

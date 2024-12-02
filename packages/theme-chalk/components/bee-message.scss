@@ -1,0 +1,67 @@
+@import "../mixin/index.scss";
+
+.bee-message__container {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: all 0.35s;
+}
+
+.slideY-fade-enter-active,
+.slideY-fade-leave-active {
+  transition: all 10s ease;
+}
+.slideY-fade-enter-from,
+.slideY-fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bee-message {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 12px;
+  min-width: 260px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 6px;
+  animation: fadeIn 0.3s;
+  .bee-message__text {
+    @include hidenText(217px);
+    font-size: 14px;
+    flex: 1;
+  }
+  .bee-message_close_icon {
+    margin-left: auto;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  &.bee-message__success {
+    background-color: var(--bee-success-tint-color);
+    color: var(--bee-success);
+  }
+  &.bee-message__info {
+    background-color: var(--bee-info-tint-color);
+    color: var(--bee-info);
+  }
+  &.bee-message__warning {
+    background-color: var(--bee-warning-tint-color);
+    color: var(--bee-warning);
+  }
+  &.bee-message__error {
+    background-color: var(--bee-danger-tint-color);
+    color: var(--bee-danger);
+  }
+}

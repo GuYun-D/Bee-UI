@@ -1,12 +1,29 @@
 <script setup lang="ts">
 import Mobile from '../../docs/.vitepress/theme/Mobile/index.vue'
+import { BeeMessage } from '@bee-ui/components'
+
+const handleShowMessage = (type: any) => {
+  BeeMessage({
+    type,
+    message: '你妈妈买的你妈妈买的你妈妈买的你妈妈买的你妈妈买的',
+    duration: 1000 * 1000,
+    icon: 'sousuo',
+    onClose: () => false,
+    customClass: "日你吗的·"
+  })
+}
 </script>
 
 <template>
   <div style="display: flex; align-items: center; width: 100vw; height: 100vh; background-color: #8b8b8b">
     <Mobile>
-      <div style="box-sizing: border-box; margin: 10px">
-        <BeeButton circle inline style="margin-bottom: 10px">文</BeeButton>
+      <BeeButton @click="handleShowMessage('success')" circle inline style="margin-bottom: 10px">success</BeeButton>
+      <BeeButton @click="handleShowMessage('error')" circle inline style="margin-bottom: 10px">error</BeeButton>
+      <BeeButton @click="handleShowMessage('warning')" circle inline style="margin-bottom: 10px">warning</BeeButton>
+      <BeeButton @click="handleShowMessage('info')" circle inline style="margin-bottom: 10px">info</BeeButton>
+
+      <!-- <div style="box-sizing: border-box; margin: 10px">
+        <BeeButton @click="handleShowMessage" circle inline style="margin-bottom: 10px">文</BeeButton>
         <BeeButton circle icon="sousuo" size="mini" inline style="margin-bottom: 10px" type="primary"></BeeButton>
         <BeeButton circle loading size="small" inline style="margin-bottom: 10px" type="success"></BeeButton>
         <BeeButton icon="message" circle size="large" inline style="margin-bottom: 10px" type="info"></BeeButton>
@@ -27,8 +44,8 @@ import Mobile from '../../docs/.vitepress/theme/Mobile/index.vue'
       <div style="box-sizing: border-box; margin: 10px">
         <BeeButton icon="sousuo" style="margin-bottom: 10px" type="primary">primary</BeeButton>
         <BeeButton loading icon="sousuo" style="margin-bottom: 10px" type="primary">primary</BeeButton>
-        <BeeButton icon-position="left" icon="message"  round  style="margin-bottom: 10px">default</BeeButton>
-        <BeeButton loading icon-position="left" icon="message"  round  style="margin-bottom: 10px">default</BeeButton>
+        <BeeButton icon-position="left" icon="message" round style="margin-bottom: 10px">default</BeeButton>
+        <BeeButton loading icon-position="left" icon="message" round style="margin-bottom: 10px">default</BeeButton>
       </div>
 
       <hr />
@@ -97,7 +114,7 @@ import Mobile from '../../docs/.vitepress/theme/Mobile/index.vue'
         <BeeButton style="margin-bottom: 10px" type="warning">warning</BeeButton>
         <BeeButton style="margin-bottom: 10px" type="danger">danger</BeeButton>
         <BeeButton style="margin-bottom: 10px" type="text">text</BeeButton>
-      </div>
+      </div> -->
     </Mobile>
   </div>
 </template>

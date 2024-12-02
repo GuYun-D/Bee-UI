@@ -1,1 +1,2 @@
-export { BeeButton } from "./Button";
+export { BeeButton } from './Button'
+export * from './Message'
